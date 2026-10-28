@@ -47,4 +47,7 @@ The application uses a simple data model with meaningful identifiers:
    - Name
    - Grade level
 
-All data is stored in memory, which means data will be reset when the server restarts.
+Activity and enrollment data is stored in SQLite at `src/activities.db` by default,
+so enrollments survive server restarts. Set `ACTIVITY_DATABASE_PATH` to use a
+different database location. On first startup, the database is initialized with
+the sample activities and enrollments.
